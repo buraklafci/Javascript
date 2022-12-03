@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello world</h1>
+
+    <p class="desc">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eligendi
+      vitae error necessitatibus iste officia maiores quidem, voluptatem
+      sapiente molestiae<b>aut</b> quod illo quaerat, laborum repellendus vel
+      praesentium tenetur atque?
+    </p>
+
+    <ul class="menu">
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+
+    <script>
+      const elH1 = document.querySelector("h1"); //h1 tag'indaki texti getirir
+      console.log(elH1);
+      const elDesc = document.querySelector("p");
+      console.log(elDesc);
+      const elMenu = document.querySelectorAll("ul li"); //nodelist olarak hepsini getirir
+      console.log(elMenu);
+      const elMenu1 = document.querySelector(".menu li:first-child"); //class degeri menu olan ve li tagindaki ilk deger
+      console.log(elMenu1);
+      const elMenu2 = document.querySelector(".menu li:last-child"); //class degeri menu olan ve li tagindaki son deger
+      console.log(elMenu2);
+      const elMenu3 = document.querySelector(".menu li:nth-child(2)"); //class degeri menu olan ve li tagindaki 2. deger
+      console.log(elMenu3);
+
+      console.log(elDesc.innerText); //sadece text getirir
+      console.log(elDesc.innerHTML); //icindeki <b>aut</b>  b taginida getirir
+      console.log(elMenu.innerText); //undefined text yok
+      console.log(elMenu.innerHTML); //undefined html yok
+      console.log(elMenu1.innerText); //Home
+      console.log(elMenu1.innerHTML); //Home
+    </script>
+  </body>
+</html>
