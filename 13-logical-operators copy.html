@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello world</h1>
+
+    <script>
+      let x = false;
+      let y = true;
+      let z = true;
+      let m = false;
+      let n = "false";
+      //0, false, null, undefined, ve "" degerlerini false kabul eder digerlerini true kabul eder
+
+      const compration = true && null; //&& de false bulursa digerlerine bakmaz AMA false bulamazsada en sonki degeri verir
+      console.log(compration); //null
+
+      const compration2 = y && z && 5;
+      console.log(compration2); //5
+
+      const compration3 = y && m && z && 5; //m false olunca digerlerine bakmaz
+      console.log(compration3); //false
+
+      const compration4 = false && null;
+      console.log(compration4); //false
+
+      const compration5 = z || 34; //|| ise true bulmaya calisir bulunca digerlerine bakmaz AMA bulamazsa en sonki degeri verir
+      console.log(compration5); //true
+
+      const compration6 = m || x || false || 34;
+      console.log(compration6); //34
+
+      const compration7 = n || 34; //n'i true kabul ettiginden ilk buldugu true degerini yani sonucu n olarak yansitir(n string bi ifade cunku)
+      console.log(compration7); //false (string)
+
+      const compration8 = n && 34; //n true olunca false bulamadigi icin en sonki degeri verir
+      console.log(compration8); //34
+
+      let s1 = "kus";
+      let s2 = "kedi";
+      console.log(s1 || s2); //ilk true gordugu deger kus tur
+      console.log(s1 && s2); //false bulamazsa en sonki deger kedi dir
+
+      let s3 = true;
+      console.log(!s3); //false
+      let s4 = null;
+      console.log(!s4); //true
+    </script>
+  </body>
+</html>

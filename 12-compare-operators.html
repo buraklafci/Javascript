@@ -10,13 +10,18 @@
     <h1>Hello world</h1>
 
     <script>
-      let z = 3;
-      let a = z++; //once atama yapar,sonra artirir
-      let b = ++z; //once arttirir, sonra atama yapar
-      console.log(a, b, z);
+      let x = 30;
+      let y = 40;
+      let z = "30";
 
-      let kalan = z % 2;
-      console.log(kalan);
+      const compration = x == y; //false
+      console.log(compration);
+
+      const compration2 = x == z; //true data turune bakmaz
+      console.log(compration2);
+
+      const compration3 = x === z; //false data turune bakar
+      console.log(compration3);
     </script>
   </body>
 </html>
