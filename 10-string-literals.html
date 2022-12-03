@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Hello world</h1>
+
+    <script>
+      var name = "Ali";
+      var sehir = "Istanbul";
+
+      // var kod='   multiline da hata verir
+      // ';
+      /* var kod ='';   eskiden bu sekilde muti line metin hazirlanirdi
+   kod +="x=12";
+   kod +="y=15";
+   */
+      var kod = `x=12
+  y=15
+  `; //seklinde es 6 da gelen ozellik
+      console.log(
+        "Merhaba " + name + " Nasilsin " + sehir + " sehrinde havalar nasil"
+      );
+
+      console.log(`Merhaba ${name}  Nasilsin ${sehir} sehrinde havalar nasil`); //butun string `` arasinda ve ${} ile degisken konuyor(string interpolation)
+    </script>
+  </body>
+</html>
