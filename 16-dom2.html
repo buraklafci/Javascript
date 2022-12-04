@@ -18,8 +18,9 @@
       }
 
       .text-style {
-        color: green;
+        color: #efefef;
         text-shadow: 3px 3px 5px black;
+        padding: 2rem;
       }
     </style>
   </head>
@@ -37,9 +38,10 @@
       let pE1 = document.querySelector("#pE1");
 
       pE1.classList.add("text-style"); //p tagina yeni classlar eklenebilir(yukarda olusturdugumuz style'lardan)
-      console.log(pE1.classList);
-
       pE1.classList.remove("red"); //ayni sekilde classlar cikarilabilir
+      pE1.classList.add("blue");
+
+      console.log(pE1.classList);
     </script>
   </body>
 </html>

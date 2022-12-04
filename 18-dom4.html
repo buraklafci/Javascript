@@ -10,13 +10,17 @@
   </head>
   <body>
     <input type="text" id="txtName" value="Ali Bey" />
-    <h3 id="lmlMessage">...</h3>
+    <button onclick="sayHello()">Say Hello</button>
+
+    <h3 id="lblMessage">...</h3>
 
     <script>
       const txtName = document.querySelector("#txtName");
-      const lmlMessage = document.querySelector("#lmlMessage");
+      const lblMessage = document.querySelector("#lblMessage");
 
-      lmlMessage.innerText = `Merhaba ${txtName.value}`; //... yerine eklendi
+      function sayHello() {
+        lblMessage.innerText = `Merhaba ${txtName.value}`;
+      }
     </script>
   </body>
 </html>
