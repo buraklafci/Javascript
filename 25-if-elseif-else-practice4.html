@@ -18,10 +18,12 @@
 
         if (price > 500) {
           discount = 10;
+        } else if (price > 300) {
+          discount = 7;
         } else {
           discount = 5;
         }
-        price = price - discount / 100;
+        price = price - (price * discount) / 100;
         document.querySelector("#result").innerHTML = `$${price}`;
       }
     </script>
