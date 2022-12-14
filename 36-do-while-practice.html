@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="txtNumber" />
+    <button onclick="calculate()">Calculate</button>
+    <h4 id="result"></h4>
+
+    <script>
+      function calculate() {
+        const elnum = document.querySelector("#txtNumber");
+        let num = isNaN(elnum.value + 0) ? 0 : Number(elnum.value);
+        // num = num == 0 ? 1 : num;//== te sadece degere bakar yada yukarda stringi number'a cevirmeliyiz
+        num = num === 0 ? 1 : num;
+        let factoriel = 1;
+
+        do {
+          factoriel *= num;
+          num--;
+        } while (num > 1);
+        document.querySelector(
+          "#result"
+        ).innerHTML = `${elnum.value}! = ${factoriel}`;
+      }
+    </script>
+  </body>
+</html>
