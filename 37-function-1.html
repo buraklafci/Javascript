@@ -16,10 +16,11 @@
         const num = document.querySelector("#txtNumber").value;
 
         const result = calculateFactoriel(num);
+
         document.querySelector("#result").innerHTML = `${num}! = ${result}`;
       }
       //DRY(tekrar etmeme),SINGLE RESPONSIBILITY(tek is yapma)
-      function calculateFactoriel(val) {
+      function calculateFactoriel(value) {
         let num = isNaN(value + 0) ? 0 : Number(value);
         // num = num == 0 ? 1 : num;//== te sadece degere bakar yada yukarda stringi number'a cevirmeliyiz
         num = num === 0 ? 1 : num;
