@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <style>
+      #product-list span {
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <input type="text" id="txtRate" />
@@ -19,22 +25,23 @@
       <li>Sound Car <span>150</span>$</li>
     </ul>
     <script>
+      //text box'a girilen deger kadar butun urunlerde indirim yapilacak
       function calculate() {
         let rate = document.querySelector("#txtRate").value;
         //  rate = rate * 1 ? rate : 0;
         rate = !isNaN(rate) ? rate : 0;
-        console.log(rate);
+
         //Listedeki tum elemanlari secerek, eleman sayisini aldik
         const list = document.querySelectorAll("#product-list li");
-        console.log(list.length);
+        // console.log(list.length);
 
         for (let i = 1; i <= list.length; i++) {
           const elPrice = document.querySelector(
             `#product-list li:nth-child(${i}) span`
           );
-          let price = Number(elPrice.innerHTML);
+          let price = Number(elPrice.innerHTML); //string ifadeyi sayiya cevirmek zordundayiz
           price = price + (price * rate) / 100;
-          elPrice.innerHTML = price;
+          elPrice.innerHTML = price.toFixed(1); //virgulden sonra 1 rakam gosterir
         }
       }
     </script>
