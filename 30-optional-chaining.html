@@ -28,8 +28,16 @@
       function setUserInfo() {
         const newSalary = user1.salary * 1.15;
 
-        const phone = user2?.phone?.gsm;
-
+        const phone = user2?.phone?.gsm; //? ile ulasamazsa hata vermez
+        //ES11 ONCESI KULLNILN YONTEM
+        /* if(user2 && user2.phone && user2.phone.gsm){
+          document.querySelector(".gsm").innerHTML=user2.phone.gsm;
+    
+        }
+        else{
+          document.querySelector(".gsm").innerHTML="no phone";
+        }
+         */
         console.log(`Sn. ${user1.name} yeni maasiniz ${newSalary} olmustur`);
       }
     </script>

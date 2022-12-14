@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="">Click Me</button>
+    <h3 id="result"></h3>
+
+    <script>
+      /*   const x = 5;
+     if (x) {
+        console.log("Degisken null, undefined, nan, 0 '' degil");
+      } else {
+        console.log("Degisken null, undefined, nan, 0 '' ");
+      } 
+      normalde 0 hiclik ve '' deger olarak kabul edilerek islem yapilmasini istiyorsak nullish coalacsing ?? kullanilir
+      */
+      const x = 0;
+      alert(x || "Anonymous"); //x 0 oldugundan false olarak kabul eder ve 2.sini yansitir
+      alert(x ?? "Annonymous"); //x false olarak kabul etmediginden x'i yansitir
+    </script>
+  </body>
+</html>
