@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="txtYear" placeholder="Type your birth year" />
+    <button onclick="onCalculateClick()">Calculate</button>
+    <h4 id="result"></h4>
+
+    <script>
+      let z = 15;
+      const test1 = () => {
+        let x = 40;
+        console.log(`x degiskeninin degeri : ${x}`); //40
+        console.log(`z degiskeninin degeri : ${z}`); //15
+      };
+
+      const tets2 = () => {
+        let x = 33;
+        let z = 11;
+        g = 33;
+        if (x > 20) {
+          let y = 15;
+          y += 10;
+        }
+        //console.log(y); scope disinda
+        console.log(z); //ilk z den farklidir scope farkli   11
+      };
+      const test3 = () => {
+        console.log(z); //ilk atanan z dir   15
+        console.log(g);
+      };
+      //console.log(`x degiskeninin degeri : ${x}`); scope disindadir
+      console.log(`z degiskeninin degeri : ${z}`); //global scope oldugu icin hata vermez  15
+
+      test1();
+      tets2();
+      test3();
+    </script>
+  </body>
+</html>
