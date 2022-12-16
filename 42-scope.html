@@ -22,13 +22,15 @@
       const tets2 = () => {
         let x = 33;
         let z = 11;
-        g = 33;
+        g = 33; //js tanimlanmamis degerleri global olarak kabul eder
         if (x > 20) {
           let y = 15;
           y += 10;
+          var t = 33;
         }
         //console.log(y); scope disinda
         console.log(z); //ilk z den farklidir scope farkli   11
+        console.log(t); //var da function ici ve global var o yuzden scope 'a   takilmaz
       };
       const test3 = () => {
         console.log(z); //ilk atanan z dir   15
