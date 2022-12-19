@@ -9,21 +9,27 @@
   <body>
     <script>
       //access oldugu icin dizinin orjinalini bozmaz
-      const animals = ["fil", "kus", "deve", "fare", "kedi"];
+      const animals = ["fil", "kus", "deve", "fare", "kedi", "kus"];
       console.log(animals);
 
       console.log(animals.includes("fil")); //eleman varmi yokmu true false doner
 
-      console.log(animals.join());
+      console.log(animals.join()); //butun elemanlari yazdirir
       console.log(animals.join(""));
-      console.log(animals.join("-"));
+      console.log(animals.join("-")); //arasina simgesini koyar
 
       console.log(animals.slice(2)); //2'ten itibaren alir
       console.log(animals.slice(2, 4));
 
-      console.log(animals.toString());
+      console.log(animals.toString()); //butun elemanlari yazdirir
 
-      console.log(animals);
+      console.log(animals.indexOf("kus")); //ilk gordugu kus un index numarasini verir
+
+      console.log(animals.lastIndexOf("kus")); //son gordugu kus un index numarasini verir
+
+      console.log(animals.lastIndexOf("at")); //olmazsa -1 donderir
+
+      console.log(animals); //dizi orjinal kaldi
     </script>
   </body>
 </html>
