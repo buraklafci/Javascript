@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const meyveler = ["Elma", "Armut", "Muz", "Kivi"];
+
+      console.log(meyveler);
+      meyveler.pop(); //son elemani siler
+      console.log(meyveler);
+      meyveler.push("Ananas"); //sona eleman ekler
+      console.log(meyveler);
+      meyveler.shift(); //bastan eleman siler
+      console.log(meyveler);
+      meyveler.unshift("Cilek"); //bastan eleman ekler
+      console.log(meyveler);
+      meyveler.reverse(); //tersten siralar
+      console.log(meyveler);
+      meyveler.sort(); //alfabetik siralar
+      console.log(meyveler);
+      meyveler.splice(1, 0, "Kiraz"); //index 1 olan elemandan itibaren islem yapacak,0 silinecek eleman
+      console.log(meyveler);
+      meyveler.splice(2, 2); //2.elemandan itibaren 2 eleman sil
+      console.log(meyveler);
+      meyveler.splice(1, 1, "Ceviz", "Findik"); //2.elemandan itibaren 2 eleman sil yerine Ceviz ve Findik ekle
+      console.log(meyveler);
+      meyveler.splice(0, meyveler.length); //hepsini siler
+      console.log(meyveler);
+    </script>
+  </body>
+</html>
