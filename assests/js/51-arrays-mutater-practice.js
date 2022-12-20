@@ -20,6 +20,10 @@ document.querySelector("#btnRemoveAll").addEventListener("click",()=>{
     cities.splice(0,cities.length);
     loadList();
 });
+document.querySelector("#btnMix").addEventListener("click",()=>{
+   getRandom();
+    loadList();
+});
 document.querySelector("#btnAddCity").addEventListener("click",()=>{
     const city=document.querySelector("#txtCity").value;
 
@@ -36,6 +40,16 @@ const loadList=()=>{
      html+=`<li>${cities[i]}</li>`;
     }
     document.querySelector("#cityList").innerHTML=html;   
+};
+const getRandom=()=>{
+    const arr=[];
+    while(cities.length>0){
+        const rndIndex=Math.floor(Math.random()*cities.length);
+        const city=cities[rndIndex];
+        arr.push(city);
+        cities.splice(rndIndex,1);
+    }
+    cities.splice(0,0, ...arr);
 };
 
 
