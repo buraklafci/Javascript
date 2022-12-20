@@ -11,13 +11,18 @@
       //tl Fiyatlar dizindeki urunlere fiyati 100 tl den fazla olanlara %10 zam,az olanlara %15 zam yapilcak
       //ayica zamli olan yenidegerleri yeni bir diziye saklamak istiyoruz
       const pricesTl = [12, 553, 234, 323, 2312, 3323];
-      const eur = 18.17;
-      const gbp = 21.39;
-
-      const pricesEur = pricesTl.map((price) => (price / eur).toFixed(2));
-      const pricesGbp = pricesTl.map((price) => (price / gbp).toFixed(2));
-
-      console.log(pricesEur, pricesGbp);
+      /* const newPrice = pricesTl.map((price) => {
+        if (price > 100) {
+          return price * 1.1;
+        } else {
+          return price * 1.15;
+        }
+      }); */
+      const newPrice = pricesTl.map(
+        (price) =>
+          price > 100 ? (price * 1.1).toFixed(2) : (price * 1.15).toFixed(2) //tek satirda retun yazmaya gerek yok
+      );
+      console.log(newPrice);
     </script>
   </body>
 </html>
