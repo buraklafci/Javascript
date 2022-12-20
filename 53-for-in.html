@@ -8,10 +8,14 @@
   </head>
   <body>
     <script>
-      //iki diziyi birlestir
+      //iki diziyi birlestir ,diziler icinde gezinir ve indexini getirir
       const animals = ["fil", "kus", "deve", "fare", "kedi", "kus"];
-
+      //for in dongusu
       for (let i in animals) {
+        console.log(i, animals[i]);
+      }
+      //for dongusu
+      for (let i = 0; i < animals.length; i++) {
         console.log(i, animals[i]);
       }
     </script>

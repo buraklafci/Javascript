@@ -8,11 +8,15 @@
   </head>
   <body>
     <script>
-      //iki diziyi birlestir
+      //diziler icinde gezinir ve dizi icindeki elemani getirir boylelikle dizi string'e cevrilebilinir
       const animals = ["fil", "kus", "deve", "fare", "kedi", "kus"];
-
-      for (let i in animals) {
-        console.log(i, animals[i]);
+      //for of dongusu
+      for (let animal of animals) {
+        console.log(animal);
+      }
+      //entries methodu ise hem indexi hem degeri dondurmeye yarar of ile kullanilir
+      for (let [index, animal] of animals.entries()) {
+        console.log(index, animal);
       }
     </script>
   </body>

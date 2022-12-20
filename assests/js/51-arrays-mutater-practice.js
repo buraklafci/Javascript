@@ -21,7 +21,7 @@ document.querySelector("#btnRemoveAll").addEventListener("click",()=>{
     loadList();
 });
 document.querySelector("#btnMix").addEventListener("click",()=>{
-   getRandom();
+    getRandom();
     loadList();
 });
 document.querySelector("#btnAddCity").addEventListener("click",()=>{
