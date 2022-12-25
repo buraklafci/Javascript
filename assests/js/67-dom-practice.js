@@ -12,7 +12,7 @@ const loadstudents=()=>{
     document.querySelector("#tblStudents tbody").innerHTML=strStudents;
 };
 const setStudentBg=()=>{
-    const rows=document.querySelectorAll("#tblStudents tbody tr").innerText;
+    const rows=document.querySelectorAll("#tblStudents tbody tr");
     for(let row of rows){
         const puan=row.querySelector("td:nth-child(3)").innerText;
     if(puan<50){
