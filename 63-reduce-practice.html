@@ -8,11 +8,13 @@
   </head>
   <body>
     <script>
+      //bir firma , 3000 den az olan maaslara %10 zam yapmak istiyor ve zam yapilan bu kiislere toplam kac
+      //Tl odenecegini bilmek istiyor,ilgili programi yaziniz
       const salaries = [2000, 2500, 5500, 10000, 1000, 1500];
       const total = salaries
         .filter((salary) => salary < 3000) //3000de kucuk degerleri filtreleyip yeni bir dizi olusturur
         .map((salary) => salary * 1.1) //yeni dizi elemanlarini 1.10 ile carpip yuzde 10 zam ypar
-        .reduce((total, x) => total + x); //zam yapilmis elemanlarin hepsini toplar
+        .reduce((total, x) => total + x, 0); //zam yapilmis elemanlarin hepsini toplar
 
       console.log(total);
     </script>
