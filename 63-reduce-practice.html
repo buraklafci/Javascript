@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const salaries = [2000, 2500, 5500, 10000, 1000, 1500];
+      const total = salaries
+        .filter((salary) => salary < 3000) //3000de kucuk degerleri filtreleyip yeni bir dizi olusturur
+        .map((salary) => salary * 1.1) //yeni dizi elemanlarini 1.10 ile carpip yuzde 10 zam ypar
+        .reduce((total, x) => total + x); //zam yapilmis elemanlarin hepsini toplar
+
+      console.log(total);
+    </script>
+  </body>
+</html>
