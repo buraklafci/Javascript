@@ -15,18 +15,32 @@
       </p>
       <ul>
         <li><a href="http://">Link1</a></li>
-        <li><a href="http://">Link2</a></li>
+        <li><a href="http://google.com" id="lnk">Link2</a></li>
         <li><a href="http://">Link3</a></li>
       </ul>
     </div>
 
     <script>
-      const el1 = document.getElementById("title");
-      console.log(el1);
-      const el2 = document.getElementsByTagName("h4");
-      console.log(el2);
-      const el3 = document.getElementsByClassName("desc");
-      console.log(el3);
+      document.querySelector("#lnk").addEventListener("click", (e) => {
+        e.preventDefault(); //google'a gitmesini engelliyor
+
+        e.target.closest(".menu").querySelector(".desc").innerHTML = //closest parent'a ulasmayi saglar en ykin elemani secer,yukari dogru calisir
+          "Hello World";
+      });
+      console.log(document.querySelector(".menu ul").children); //ul nin child'larini secer
+
+      console.log(document.querySelector(".menu ul").firstElementChild); //elementin ilk cocugunu secer Link1
+      console.log(document.querySelector(".menu ul").lastElementChild); //elementin son cocugunu secer  Link3
+
+      console.log(document.querySelector("#lnk").parentElement.parentElement); //adim adim uste parent'a cikilir a dan sonra li sonra ul
+
+      console.log(
+        document.querySelector("#lnk").parentElement.nextElementSibling //Link2 de ki li nin sonraki kardesi li taginda Link3
+      );
+
+      console.log(
+        document.querySelector("#lnk").parentElement.previousElementSibling ////Link2 de ki li nin onceki kardesi li taginda Link1
+      );
     </script>
   </body>
 </html>
