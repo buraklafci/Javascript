@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="list">
+      <!-- prepend buraya ekler-->
+      <li>Ali</li>
+      <li>Veli</li>
+      <li>Ayse</li>
+      <li>Fatma</li>
+      <!-- append buraya ekler-->
+    </ul>
+
+    <script>
+      const newLi1 = document.createElement("li");
+      newLi1.innerText = "Berk";
+      newLi1.classList.add("bg-primary");
+      newLi1.setAttribute("data-id", 23);
+
+      const newLi2 = document.createElement("li");
+      newLi2.innerText = "Burak";
+      newLi2.classList.add("bg-primary");
+      newLi2.setAttribute("data-id", 23);
+      //document.querySelector("#list").appendChild(newLi1); //metin eklenmez
+      document.querySelector("#list").append(newLi1); //yeni elementi sona ekliyor , metinde eklenebilir
+      document.querySelector("#list").prepend(newLi2); //yeni elementi basa ekliyor
+
+      document.querySelector("#list li:nth-child(3)").remove(); //element siler
+    </script>
+  </body>
+</html>

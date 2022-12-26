@@ -18,6 +18,8 @@
         <input
           id="txtTck"
           type="number"
+          minlength="11"
+          maxlength="11"
           placeholder="TC kimlik no"
           class="form-control"
         />
@@ -26,9 +28,16 @@
     </div>
 
     <script>
+      //TC 11 karakterli olunca kaydet aktif 11 olmazsa pasif yap
       document.querySelector("#txtTck").addEventListener("input", (e) => {
         //radio button, check box,select lerde onchange
         //AMA TEXTBOXlarda onchange yerine INPUT kullanilir
+        const btn = document.querySelector("#btnSave");
+        if (e.target.value.length === 11) {
+          btn.removeAttribute("disabled");
+        } else {
+          btn.setAttribute("disabled", "");
+        }
       });
     </script>
   </body>
