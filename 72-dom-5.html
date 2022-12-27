@@ -17,6 +17,7 @@
     </ul>
 
     <script>
+      const a;
       const newLi1 = document.createElement("li");
       newLi1.innerText = "Berk";
       newLi1.classList.add("bg-primary");
@@ -28,9 +29,10 @@
       newLi2.setAttribute("data-id", 23);
       //document.querySelector("#list").appendChild(newLi1); //metin eklenmez
       document.querySelector("#list").append(newLi1); //yeni elementi sona ekliyor , metinde eklenebilir
+
       document.querySelector("#list").prepend(newLi2); //yeni elementi basa ekliyor
 
-      document.querySelector("#list li:nth-child(3)").remove(); //element siler
+      document.querySelector("#list li:nth-child(3)").remove(); //element siler.
     </script>
   </body>
 </html>
